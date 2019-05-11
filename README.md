@@ -21,7 +21,7 @@ A sample DDClient configuration is already available in */etc/ddclient/sample-et
 as a reference. A custom DDClient configuration needs to be installed in **/etc/ddclient/ddclient.conf**:
 
 ```bash
-docker run -v ~/ddclient.conf:/etc/ddclient/ddclient.conf captainmalloc/alpine_ddclient
+docker run -t -d -v ~/ddclient.conf:/etc/ddclient/ddclient.conf captainmalloc/alpine_ddclient
 ```
 
 ### DDClient example configuration
@@ -52,6 +52,10 @@ www.domain.tld,
 
 ## Release Notes
 
-### Initial Revision (2019-05-08)
+### Patch 1 (2019-05-11)
+
+Fix *docker run* command to execute detached and in background.
+
+### Initial Revision (2019-05-11)
 
 Alpine 3.9 + DDClient 3.9
